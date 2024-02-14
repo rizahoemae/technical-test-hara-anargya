@@ -1,194 +1,205 @@
 let province = [
   {
     id: 1,
-    name: "ACEH",
+    name: 'ACEH',
     wilayah_id: 15,
   },
   {
     id: 2,
-    name: "SUMATERA UTARA",
+    name: 'SUMATERA UTARA',
     wilayah_id: 25,
   },
   {
     id: 3,
-    name: "SUMATERA BARAT",
+    name: 'SUMATERA BARAT',
     wilayah_id: 9,
   },
   {
     id: 4,
-    name: "RIAU",
+    name: 'RIAU',
     wilayah_id: 10,
   },
   {
     id: 5,
-    name: "JAMBI",
+    name: 'JAMBI',
     wilayah_id: 20,
   },
   {
     id: 6,
-    name: "SUMATERA SELATAN",
+    name: 'SUMATERA SELATAN',
     wilayah_id: 11,
   },
   {
     id: 7,
-    name: "BENGKULU",
+    name: 'BENGKULU',
     wilayah_id: 12,
   },
   {
     id: 8,
-    name: "LAMPUNG",
+    name: 'LAMPUNG',
     wilayah_id: 26,
   },
   {
     id: 9,
-    name: "KEPULAUAN BANGKA BELITUNG",
+    name: 'KEPULAUAN BANGKA BELITUNG',
     wilayah_id: 29,
   },
   {
     id: 10,
-    name: "KEPULAUAN RIAU",
+    name: 'KEPULAUAN RIAU',
     wilayah_id: 19,
   },
   {
     id: 11,
-    name: "DKI JAKARTA",
+    name: 'DKI JAKARTA',
     wilayah_id: 1,
   },
   {
     id: 12,
-    name: "JAWA BARAT",
+    name: 'JAWA BARAT',
     wilayah_id: 2,
   },
   {
     id: 13,
-    name: "JAWA TENGAH",
+    name: 'JAWA TENGAH',
     wilayah_id: 3,
   },
   {
     id: 14,
-    name: "DI YOGYAKARTA",
+    name: 'DI YOGYAKARTA',
     wilayah_id: 4,
   },
   {
     id: 15,
-    name: "JAWA TIMUR",
+    name: 'JAWA TIMUR',
     wilayah_id: 5,
   },
   {
     id: 16,
-    name: "BANTEN",
+    name: 'BANTEN',
     wilayah_id: 22,
   },
   {
     id: 17,
-    name: "BALI",
+    name: 'BALI',
     wilayah_id: 6,
   },
   {
     id: 18,
-    name: "NUSA TENGGARA BARAT",
+    name: 'NUSA TENGGARA BARAT',
     wilayah_id: 7,
   },
   {
     id: 19,
-    name: "NUSA TENGGARA TIMUR",
+    name: 'NUSA TENGGARA TIMUR',
     wilayah_id: 8,
   },
   {
     id: 20,
-    name: "KALIMANTAN BARAT",
+    name: 'KALIMANTAN BARAT',
     wilayah_id: 17,
   },
   {
     id: 21,
-    name: "KALIMANTAN TENGAH",
+    name: 'KALIMANTAN TENGAH',
     wilayah_id: 27,
   },
   {
     id: 22,
-    name: "KALIMANTAN SELATAN",
+    name: 'KALIMANTAN SELATAN',
     wilayah_id: 13,
   },
   {
     id: 23,
-    name: "KALIMANTAN TIMUR",
+    name: 'KALIMANTAN TIMUR',
     wilayah_id: 18,
   },
   {
     id: 24,
-    name: "SULAWESI UTARA",
+    name: 'SULAWESI UTARA',
     wilayah_id: 14,
   },
   {
     id: 25,
-    name: "SULAWESI TENGAH",
+    name: 'SULAWESI TENGAH',
     wilayah_id: 21,
   },
   {
     id: 26,
-    name: "SULAWESI SELATAN",
+    name: 'SULAWESI SELATAN',
     wilayah_id: 16,
   },
   {
     id: 27,
-    name: "SULAWESI TENGGARA",
+    name: 'SULAWESI TENGGARA',
     wilayah_id: 23,
   },
   {
     id: 28,
-    name: "GORONTALO",
+    name: 'GORONTALO',
     wilayah_id: 32,
   },
   {
     id: 29,
-    name: "SULAWESI BARAT",
+    name: 'SULAWESI BARAT',
     wilayah_id: 33,
   },
   {
     id: 30,
-    name: "MALUKU",
+    name: 'MALUKU',
     wilayah_id: 30,
   },
   {
     id: 31,
-    name: "MALUKU UTARA",
+    name: 'MALUKU UTARA',
     wilayah_id: 28,
   },
   {
     id: 32,
-    name: "PAPUA BARAT",
+    name: 'PAPUA BARAT',
     wilayah_id: 34,
   },
   {
     id: 33,
-    name: "PAPUA",
+    name: 'PAPUA',
     wilayah_id: 24,
   },
   {
     id: 34,
-    name: "KALIMANTAN UTARA",
+    name: 'KALIMANTAN UTARA',
     wilayah_id: 31,
   },
   {
     id: 35,
-    name: "PAPUA TENGAH",
+    name: 'PAPUA TENGAH',
     wilayah_id: 35,
   },
   {
     id: 36,
-    name: "PAPUA PEGUNUNGAN",
+    name: 'PAPUA PEGUNUNGAN',
     wilayah_id: 36,
   },
   {
     id: 37,
-    name: "PAPUA SELATAN",
+    name: 'PAPUA SELATAN',
     wilayah_id: 37,
   },
   {
     id: 38,
-    name: "PAPUA BARAT DAYA",
+    name: 'PAPUA BARAT DAYA',
     wilayah_id: 38,
   },
 ];
 
+export const findByIdProv = (id) => {
+  return province.find((data) => data.id == id).name;
+};
+
+export const sortProv = (args) => {
+  if (args == 'asc') {
+    return province.sort((a, b) => a.id - b.id);
+  } else {
+    return province.sort((a, b) => b.id - a.id);
+  }
+};
 export default province;
