@@ -1,5 +1,8 @@
 # Technical Test Frontend Hara Anargya
 
+## Info
+* Mawaddatur Riza H / rizahoemae@gmail.com
+  
 ## Installation
 * Fork Repo ini
 * Clone Repo ini
